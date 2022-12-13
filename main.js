@@ -110,6 +110,10 @@ function addActivitesInsideCard(){
      //console.log(ele);
 }
 
+
+// added task for placing activities inside a card.
+
+
 function AddNewTaskForCountry(){
 
     document.getElementById('popUpForCountry').style.display='block';
