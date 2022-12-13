@@ -8,7 +8,10 @@ function ClosePopUpScreen(){
     document.getElementById('mainContainer').style.filter= 'blur(0px)';
 }
 
-
+function ClosePopUpScreenForCountry(){
+    document.getElementById('popUpForCountry').style.display='none';
+    document.getElementById('mainContainer').style.filter= 'blur(0px)';
+}
 
 function AddNewTask(){
 
@@ -25,9 +28,16 @@ function AddNewTask(){
     deleteButtonInsideTask.innerText='X';
     plusButtonInsideTask.innerHTML='+';
 
+
+
+    // Adding event for card deletion .
+
     deleteButtonInsideTask.addEventListener('click',removeCardFunction);
 
 
+    // Adding event for Acivities ti be inserted inside Card 
+
+    plusButtonInsideTask.addEventListener('click', AddNewTaskForCountry)
 
     cardHeading.textContent= valueofCardCreated;
     parentForFlexItem.appendChild(newCardInParent);
@@ -76,15 +86,6 @@ function AddNewTask(){
     plusButtonInsideTask.style.color='white';
     plusButtonInsideTask.style.borderRadius='5px';
 
-
-    
-
-
-
-
-
-
-
     //
     
 
@@ -94,6 +95,58 @@ function AddNewTask(){
 
 
 function removeCardFunction(){
-    console.log('remoceFunction was invoked');
+    
     this.parentElement.parentElement.remove();
 }
+
+function addActivitesInsideCard(){
+
+    document.getElementById('popUpForCountry').style.display='none';
+    document.getElementById('mainContainer').style.filter= 'blur(0px)';
+
+
+    
+    console.log("Hello this is adding actitvity inside card");
+     //console.log(ele);
+}
+
+function AddNewTaskForCountry(){
+
+    document.getElementById('popUpForCountry').style.display='block';
+    document.getElementById('mainContainer').style.filter= 'blur(8px)'; 
+    
+    
+    // var hrel = this.parentElement.previousElementSibling;
+
+    ouetr:
+    var hrel = this.parentElement.parentElement;
+    console.log("add button for country invoked ", hrel);
+
+    document.getElementById('addButtonPopUpScreenForCountry').addEventListener('click',()=>{
+
+        document.getElementById('popUpForCountry').style.display='none';
+        document.getElementById('mainContainer').style.filter= 'blur(0px)';
+
+        let divActivityCard = document.createElement('div');
+        let activitybox = document.createElement('span');
+        let markDoneButton = document.createElement('button');
+        let activityValue = document.getElementById('inputTaskIdForCountry').value; 
+
+        activitybox.textContent = activityValue;
+
+        divActivityCard.appendChild(activitybox);
+        divActivityCard.appendChild(markDoneButton);
+        hrel.appendChild(divActivityCard);
+
+        console.log("input value fo country is : ", activityValue);
+
+        console.log('inside anonymous function : ', hrel);
+        hrel =' ';
+        return  ;
+    })
+
+    
+ ;
+
+    }
+
