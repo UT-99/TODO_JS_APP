@@ -12,18 +12,30 @@
     <div id="mainContainer">
        <div id="header">
             <h2 id = 'taskListHeading'>TASKS LISTS</h2>
-            <a href="" id="anchorLink"><div><span id="plusSymbol">&plus;</span><span id="AddItemButtonHeading">ADD ITEMS</span></div></a>
+            <button id="anchorLink"><div><span id="plusSymbol" onclick="showPopUpMenu()">&plus;</span><span id="AddItemButtonHeading" onclick="showPopUpMenu()">ADD ITEMS</span></div></button>
        </div>
 
 
+       <div id="addNewlyAddedTaskHere"></div>
 
+    </div> 
+
+
+    <div id="popUp">
+        <h3 id="AddNewListHeadingPopUp">ADD NEW LIST</h3>
         
 
+        <center>
+            <input type="text" name="inputTask" id="inputTaskId" placeholder="Add New Task">
+            <br>
+            <br>
 
-
-
-
-
+            <div>
+                <button id="addButtonPopUpScreen" onclick="AddNewTask()">ADD</button><button id="closeButtonPopUpScreen" onclick="ClosePopUpScreen()">CLOSE</button>
+            </div>
+        </center>
+        
+       
 
     </div>
 
