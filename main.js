@@ -49,7 +49,8 @@ function AddNewTask(){
 
 //  related to div that is added
 
-    newCardInParent.style.height='40vh';
+    newCardInParent.style.minHeight='40vh';
+    newCardInParent.style.height='auto';
     newCardInParent.style.width='18vw';
     newCardInParent.style.backgroundColor='white';
     newCardInParent.className='DynamicallyAddedFlexItems';
@@ -130,23 +131,53 @@ function AddNewTaskForCountry(){
 
         document.getElementById('popUpForCountry').style.display='none';
         document.getElementById('mainContainer').style.filter= 'blur(0px)';
-
+        
+        let break1 = document.createElement('br');
         let divActivityCard = document.createElement('div');
-        let activitybox = document.createElement('span');
+        let activitybox = document.createElement('p');
         let markDoneButton = document.createElement('button');
         let activityValue = document.getElementById('inputTaskIdForCountry').value; 
 
         activitybox.textContent = activityValue;
+        activitybox.style.textAlign='center';
+        activitybox.style.verticalAlign='middle';
 
+        divActivityCard.style.display='flex';
+        divActivityCard.textAlign='center';
+        divActivityCard.style.justifyContent='spaceBetween';
+        divActivityCard.style.paddingLeft='2%';
+        divActivityCard.style.alignContent ='center'
+        divActivityCard.alignItems='center';
+        
+            
         divActivityCard.appendChild(activitybox);
         divActivityCard.appendChild(markDoneButton);
+        
         hrel.appendChild(divActivityCard);
+        hrel.appendChild(break1);
 
-        console.log("input value fo country is : ", activityValue);
+        activitybox.style.width='20%';
+
+        markDoneButton.style.background='orange';
+        markDoneButton.style.height='30px';
+        markDoneButton.style.width = 'auto';
+        markDoneButton.style.borderRadius='5px'
+        markDoneButton.textContent='mark'       
+
+        console.log("input value for country is : ", activityValue);
 
         console.log('inside anonymous function : ', hrel);
-        hrel =' ';
-        return  ;
+        hrel ='';
+
+
+
+        markDoneButton.addEventListener('click', () => {
+            markDoneButton.style.display='none';
+            activitybox.style.textDecorationLine = 'line-through ';
+            activitybox.style.color = 'red';
+            console.log('this is for marking function value : ');
+        })
+    
     })
 
     
