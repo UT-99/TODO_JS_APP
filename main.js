@@ -103,10 +103,7 @@ function removeCardFunction(){
 function addActivitesInsideCard(){
 
     document.getElementById('popUpForCountry').style.display='none';
-    document.getElementById('mainContainer').style.filter= 'blur(0px)';
-
-
-    
+    document.getElementById('mainContainer').style.filter= 'blur(0px)';    
     console.log("Hello this is adding actitvity inside card");
      //console.log(ele);
 }
