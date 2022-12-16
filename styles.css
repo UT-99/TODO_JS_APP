@@ -170,7 +170,12 @@ body{
     border-radius: 6px;
 }
 
-
+#NoItems{
+    color: white;
+    font-size: 1.86em;
+    padding-left: 7%;
+    font-family: sans-serif;
+}
 
 #addNewlyAddedTaskHere{
     display: flex;

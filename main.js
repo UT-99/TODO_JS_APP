@@ -1,4 +1,5 @@
 function showPopUpMenu(){
+    document.getElementById('NoItems').style.display='none';
     document.getElementById('popUp').style.display='block';
     document.getElementById('mainContainer').style.filter= 'blur(8px)';
 }
@@ -119,7 +120,9 @@ function AddNewTaskForCountry(){
     
     
     // var hrel = this.parentElement.previousElementSibling;
+    document.getElementById('closeButtonPopUpScreenForCountry').addEventListener('click', ClosePopUpScreenForCountry);
 
+ 
     ouetr:
     var hrel = this.parentElement.parentElement;
     console.log("add button for country invoked ", hrel);
@@ -171,7 +174,9 @@ function AddNewTaskForCountry(){
         markDoneButton.addEventListener('click', () => {
             markDoneButton.style.display='none';
             activitybox.style.textDecorationLine = 'line-through ';
-            activitybox.style.color = 'red';
+            activitybox.style.color = 'purple';
+            activitybox.style.fontSize='1.2em';
+            activitybox.style.paddingLeft = '38%';
             console.log('this is for marking function value : ');
         })
     
