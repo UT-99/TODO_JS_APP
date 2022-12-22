@@ -49,18 +49,30 @@ function AddNewTask(){
     cardHeading.addEventListener('click',() => {
 
         console.log('Heading clicked');
-        // console.log(document.querySelector('.forOneCardHeadingContaner'));
-
-
-
-
+        
         document.querySelector('.forOneCardHeadingContaner').style.display='block';
         document.getElementById('mainContainer').style.display='none';
 
-        console.log(cardHeading.parentElement);
+         card = cardHeading.parentElement;
 
-        document.getElementById('cardThatIsSelectedCeneter').insertAdjacentElement("afterbegin",cardHeading.parentElement);
+         console.log('card is : ',card);
 
+        
+
+        // document.getElementById('cardThatIsSelectedCeneter').insertAdjacentElement("afterbegin",cardHeading.parentElement);
+        document.getElementById('cardThatIsSelectedCeneter').insertAdjacentElement("afterbegin",card);
+        // document.getElementById('cardThatIsSelectedCeneter').insertAdjacentHTML('afterbegin', card);
+
+        document.getElementById('BackButtonForSingleCard').addEventListener('click', (e) =>{
+            e.preventDefault();
+
+            console.log("Function for Back button clicked .");
+
+            document.querySelector('.forOneCardHeadingContaner').style.display='none';
+            document.getElementById('mainContainer').style.display='block';
+
+
+        })
 
 
 
