@@ -12,6 +12,7 @@ function ClosePopUpScreen(){
 function ClosePopUpScreenForCountry(){
     document.getElementById('popUpForCountry').style.display='none';
     document.getElementById('mainContainer').style.filter= 'blur(0px)';
+    // console.log("Close pop for country invoked : ", this.parentElement.parentElement);
 }
 
 function AddNewTask(){
@@ -26,8 +27,10 @@ function AddNewTask(){
     let deleteButtonInsideTask = document.createElement('button');
     let plusButtonInsideTask  =document.createElement('button');
 
-    deleteButtonInsideTask.innerText='X';
-    plusButtonInsideTask.innerHTML='+';
+    // deleteButtonInsideTask.innerText='X';
+    deleteButtonInsideTask.innerHTML='<i class="material-icons">delete</i>';
+    // plusButtonInsideTask.innerHTML='&plus;';
+    plusButtonInsideTask.innerHTML='<i class="fa fa-plus"></i>';
 
 
 
@@ -36,9 +39,18 @@ function AddNewTask(){
     deleteButtonInsideTask.addEventListener('click',removeCardFunction);
 
 
-    // Adding event for Acivities ti be inserted inside Card 
+    // Adding event for Acivities to be inserted inside Card 
 
     plusButtonInsideTask.addEventListener('click', AddNewTaskForCountry)
+
+
+    // Clicking on heading function 
+
+    cardHeading.addEventListener('click',()=>{
+        
+    })
+
+
 
     cardHeading.textContent= valueofCardCreated;
     parentForFlexItem.appendChild(newCardInParent);
@@ -75,7 +87,7 @@ function AddNewTask(){
     deleteButtonInsideTask.style.bottom='10px';
     deleteButtonInsideTask.style.backgroundColor='lightgreen';
     deleteButtonInsideTask.style.color='white';
-    deleteButtonInsideTask.style.borderRadius='5px';
+    deleteButtonInsideTask.style.borderRadius='10px';
 
 
 
@@ -86,7 +98,7 @@ function AddNewTask(){
     plusButtonInsideTask.style.right='10px';
     plusButtonInsideTask.style.backgroundColor='skyblue';
     plusButtonInsideTask.style.color='white';
-    plusButtonInsideTask.style.borderRadius='5px';
+    plusButtonInsideTask.style.borderRadius='10px';
 
     //
     
@@ -120,7 +132,12 @@ function AddNewTaskForCountry(){
     
     
     // var hrel = this.parentElement.previousElementSibling;
-    document.getElementById('closeButtonPopUpScreenForCountry').addEventListener('click', ClosePopUpScreenForCountry);
+    document.getElementById('closeButtonPopUpScreenForCountry').addEventListener('click', function ClosePopUpScreenForCountry(){
+        document.getElementById('popUpForCountry').style.display='none';
+        document.getElementById('mainContainer').style.filter= 'blur(0px)';
+        // console.log("Close pop for country invoked : ", this.parentElement.parentElement);
+        
+    });
 
  
     ouetr:
@@ -144,9 +161,9 @@ function AddNewTaskForCountry(){
 
         divActivityCard.style.display='flex';
         divActivityCard.textAlign='center';
-        divActivityCard.style.justifyContent='spaceBetween';
+        divActivityCard.style.justifyContent='center';
         divActivityCard.style.paddingLeft='2%';
-        divActivityCard.style.alignContent ='center'
+        divActivityCard.style.alignContent ='spaceBetween'
         divActivityCard.alignItems='center';
         
             
@@ -158,7 +175,8 @@ function AddNewTaskForCountry(){
 
         activitybox.style.width='20%';
 
-        markDoneButton.style.background='orange';
+        markDoneButton.style.background='skyblue';
+        markDoneButton.style.color='white';
         markDoneButton.style.height='30px';
         markDoneButton.style.width = 'auto';
         markDoneButton.style.borderRadius='5px'
@@ -176,7 +194,7 @@ function AddNewTaskForCountry(){
             activitybox.style.textDecorationLine = 'line-through ';
             activitybox.style.color = 'purple';
             activitybox.style.fontSize='1.2em';
-            activitybox.style.paddingLeft = '38%';
+            activitybox.style.paddingLeft = '0px';
             console.log('this is for marking function value : ');
         })
     
