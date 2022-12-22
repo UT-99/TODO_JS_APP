@@ -46,7 +46,25 @@ function AddNewTask(){
 
     // Clicking on heading function 
 
-    cardHeading.addEventListener('click',()=>{
+    cardHeading.addEventListener('click',() => {
+
+        console.log('Heading clicked');
+        // console.log(document.querySelector('.forOneCardHeadingContaner'));
+
+
+
+
+        document.querySelector('.forOneCardHeadingContaner').style.display='block';
+        document.getElementById('mainContainer').style.display='none';
+
+        console.log(cardHeading.parentElement);
+
+        document.getElementById('cardThatIsSelectedCeneter').insertAdjacentElement("afterbegin",cardHeading.parentElement);
+
+
+
+
+
         
     })
 
@@ -205,3 +223,6 @@ function AddNewTaskForCountry(){
 
     }
 
+
+
+  

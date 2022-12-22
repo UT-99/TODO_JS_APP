@@ -2,6 +2,52 @@ body{
     background-color: black;
 }
 
+
+.forOneCardHeadingContaner{
+    display: none;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 2%;
+    
+}
+
+#AddButtonForSingleCard{
+    background-color: black;
+    color: blue;
+    font-size: 1.34em;
+    border-radius: 50%;
+}
+
+
+#BackButtonForSingleCard{
+    background-color: rgb(16, 15, 15);
+    width: 50px;
+    border-radius: 50%;
+    color: white;
+}
+
+#HeadingOfCardInsideGrid{
+    color: whitesmoke;
+    font-family: sans-serif;
+    color: white ;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#BackButton{
+    color: white;
+    font-size: 1em;
+    font-family: sans-serif;
+}
+
+#headerForOneCard{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 0.5fr  2fr 0.5fr ;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #mainContainer{
     width: 95%;
     height: 100vh;
