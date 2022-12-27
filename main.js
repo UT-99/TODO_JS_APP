@@ -28,9 +28,9 @@ function AddNewTask(){
     let plusButtonInsideTask  =document.createElement('button');
 
     // deleteButtonInsideTask.innerText='X';
-    deleteButtonInsideTask.innerHTML='<i class="material-icons">delete</i>';
+    deleteButtonInsideTask.innerHTML='<i class="material-icons" style="font-size:1.32vw">delete</i>';
     // plusButtonInsideTask.innerHTML='&plus;';
-    plusButtonInsideTask.innerHTML='<i class="fa fa-plus"></i>';
+    plusButtonInsideTask.innerHTML='<i class="fa fa-plus" style="font-size:1.32vw"></i>';
 
 
 

@@ -313,10 +313,73 @@ body{
 
     .DynamicallyAddedFlexItems{
         width: 80%;
-        padding-left: 10%;
+        margin-left: 10%;
     }
 
 
 
     
  }
+
+
+ 
+@media screen  and (min-width: 110px) and (max-width: 780px){
+
+    #taskListHeading{
+        font-size: 7.67vw;
+    }
+
+    #AddItemButtonHeading{
+        font-size: 4.45vw;
+    }
+
+    #NoItems{
+        font-size: 3.34vw;
+    }
+
+    .fa,.fa-plus{
+        font-size: 6vw;
+    }
+    #popUp{
+        height: auto;
+        width:70%;
+        left:5%;
+        margin-left: 0%;
+        position: absolute;
+        top: 30%;
+        background-color: white;
+        border: 2px solid orange;
+        border-radius: 14px;
+        justify-content: center;
+        align-items: center;
+        display: none;
+
+    }
+    #addButtonPopUpScreen:hover, #closeButtonPopUpScreen:hover{
+        background-color: blueviolet;
+        color: white;
+        box-shadow: 2px 2px 9px rgb(173, 134, 209);
+    }
+    
+    
+
+    
+#addButtonPopUpScreen{
+    background-color: orangered;
+    margin-right: 5px;
+    width: 30%;  
+    height: 10%;  
+    border-radius: 6px;
+    font-size: 2vw;
+}
+
+#closeButtonPopUpScreen{
+    display: inline-block;
+    background-color: orangered;
+    width: 30%;
+    height: 10%;         
+    border-radius: 6px;
+    font-size: 2vw;
+}
+    
+}
