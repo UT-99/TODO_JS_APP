@@ -94,7 +94,7 @@ function AddNewTask(){
 
     newCardInParent.style.minHeight='40vh';
     newCardInParent.style.height='auto';
-    newCardInParent.style.width='18vw';
+    // newCardInParent.style.width='18vw';
     newCardInParent.style.backgroundColor='white';
     newCardInParent.className='DynamicallyAddedFlexItems';
     newCardInParent.style.borderRadius = "6px"

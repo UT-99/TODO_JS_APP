@@ -258,3 +258,24 @@ body{
     align-items: center;
     align-content: center;
  }
+
+ .DynamicallyAddedFlexItems{
+    width: 18vw;
+ }
+
+ @media  screen and (min-width : 110px) and (max-width : 580px) {
+
+    #addNewlyAddedTaskHere{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+
+    .DynamicallyAddedFlexItems{
+        width: 80%;
+        padding-left: 10%;
+    }
+    
+ }
