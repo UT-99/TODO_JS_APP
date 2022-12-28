@@ -57,6 +57,8 @@ function AddNewTask(){
 
          console.log('card is : ',card);
 
+         document.getElementById('HeadingOfCardInsideGrid').innerText = valueofCardCreated;
+
         
 
         // document.getElementById('cardThatIsSelectedCeneter').insertAdjacentElement("afterbegin",cardHeading.parentElement);
@@ -188,6 +190,7 @@ function AddNewTaskForCountry(){
         activitybox.textContent = activityValue;
         activitybox.style.textAlign='center';
         activitybox.style.verticalAlign='middle';
+       
 
         divActivityCard.style.display='flex';
         divActivityCard.textAlign='center';
@@ -204,6 +207,7 @@ function AddNewTaskForCountry(){
         hrel.appendChild(break1);
 
         activitybox.style.width='20%';
+        // activitybox.setAttribute('class', 'scrollbar');
 
         markDoneButton.style.background='skyblue';
         markDoneButton.style.color='white';

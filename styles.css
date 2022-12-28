@@ -321,7 +321,18 @@ body{
     
  }
 
+ .scrollbar {
+    scrollbar-width: 1px ;
+    /* background-color: lightgreen; */
+    height: 80px;
+    width: auto;
+    min-width: 60%;
+    
+    overflow-x: scroll;
+   
+}
 
+/* 9PB_BUDDY_DEV */
  
 @media screen  and (min-width: 110px) and (max-width: 780px){
 
@@ -413,4 +424,12 @@ body{
     font-size: 2vw;
 }
     
+.scrollbar {
+    scrollbar-width: auto;
+    background-color: lightgreen;
+    height: auto;
+    width: auto;
+    overflow-y: scroll;
+}
+
 }
