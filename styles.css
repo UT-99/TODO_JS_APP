@@ -121,7 +121,7 @@ body{
     display: none;
 }
 
-@media screen  and (min-width: 110px) and (max-width: 780px){
+@media screen  and (min-width: 110px) and (max-width: 1080px){
 
     #popUp{
         height: auto;
@@ -301,7 +301,7 @@ body{
     width: 18vw;
  }
 
- @media  screen and (min-width : 110px) and (max-width : 580px) {
+ @media  screen and (min-width : 110px) and (max-width : 1080px) {
 
     #addNewlyAddedTaskHere{
         display: flex;
@@ -334,7 +334,7 @@ body{
 
 /* 9PB_BUDDY_DEV */
  
-@media screen  and (min-width: 110px) and (max-width: 780px){
+@media screen  and (min-width: 110px) and (max-width: 1080px){
 
     #taskListHeading{
         font-size: 7.67vw;
@@ -433,6 +433,10 @@ body{
 }
 
 }
+
+
+
+
 
 
 .cardThatIsSelectedcolorClass{
